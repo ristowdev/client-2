@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@hocs/*": ["hocs/*"],
+      "@context/*": ["context/*"],
+      "@containers/*": ["containers/*"],
+      "@utils/*": ["utils/*"],
+      "@services/*": ["services/*"],
+      "@store/*": ["store/*"],
+      "@common/*": ["common/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
