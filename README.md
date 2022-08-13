@@ -31,3 +31,4 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import 'react-toastify/dist/ReactToastify.css';
 import '@progress/kendo-theme-default/dist/all.css';
+# client-2
