@@ -14,6 +14,8 @@ import 'rc-time-picker/assets/index.css'
 import 'react-popper-tooltip/dist/styles.css'
 import 'react-input-range-rtl/lib/css/index.css'
 import 'react-accessible-accordion/dist/fancy-example.css';
+import '@progress/kendo-theme-default/dist/all.css';
+
 // app styles
 import '../styles/app.css'
 import '../styles/nprocess.css'

@@ -109,7 +109,7 @@ function Login() {
                           />
                           <span className="focus-input100" data-placeholder="&#xf191;"/>
                         </div>
-                      )}
+                      )} 
                     </Field>
                     {!DEVELOPMENT_MODE && (
                       <ReCAPTCHA
@@ -120,7 +120,8 @@ function Login() {
                     <div className="container-login100-form-btn mt-3">
                       <Button
                         classList="login100-form-btn"
-                        disabled={submitting || pristine || (!DEVELOPMENT_MODE && !recaptcha)}
+                        // disabled={submitting || pristine || (!DEVELOPMENT_MODE && !recaptcha)}
+                        disabled={submitting || pristine || (!DEVELOPMENT_MODE && recaptcha)}
                         loading={submitting}
                         text={T['Page.Login.LoginAction.Caption']}
                       />
@@ -139,7 +140,7 @@ function Login() {
                   <a className="txt1">{T['Page.Login.RegisterLink.Caption']}</a>
                 </Link>
               </div>
-              <div className="h-1 bg-red-50 w-100 mt-5"/>
+              <div className="h-1c§ bg-red-50 w-100 mt-5"/>
               <LangForm languages={languages} lang={lang} setLang={setLang}/>
             </div>
           </div>

@@ -58,6 +58,9 @@ class MyDocument extends Document {
           <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
           <meta name="msapplication-TileColor" content="#da532c"/>
           <meta name="theme-color" content="#ffffff"/>
+          {/* <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/5.6.0/default/default-main.css"></link>
+          <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> */}
+
         </Head>
         <body
           className="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-color logo-dark">

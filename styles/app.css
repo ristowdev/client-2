@@ -416,3 +416,110 @@ body[dir=rtl] .accordion__button[aria-expanded='false']::before {
 .input-form-control:focus {
   border: 1px solid #dee2e6 !important;
 }
+
+.position-relative{
+  position: relative;
+}
+
+.box-picker-main{
+  position: absolute;
+  top: 0;
+  width: 230px;
+  height: 250px;
+  background-color: white;
+  z-index: 999;
+
+  box-shadow: 0 1px 5px #ccc;
+  /* background-clip: padding-box; */
+  border: 1px solid #ccc;
+  margin-top: 45px;
+}
+
+.single-inside-picker{
+  overflow: scroll;
+  width: 76.66px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-picker-main-inside{
+  display: flex;
+}
+
+.s-i-p-cell{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.k-animation-container{
+  z-index: 9999 !important;
+}
+
+/* new version */
+.k-input-md, .k-picker-md {
+  height: 42px !important;
+  border: 1px solid #ccc !important;
+}
+
+
+/* old version */
+.k-widget{
+  width: 100% !important;
+}
+
+.k-widget input{
+  height: 42px !important;
+}
+
+.k-picker-wrap {
+  border:1px solid #ccc !important;
+  border-radius: 4px !important;
+}
+
+.k-select{
+  width: 40px !important;
+  border-left: 1px solid #ccc !important;
+}
+
+.k-state-focused{
+  box-shadow: unset !important;
+  /* border: 2px solid #c8deff !important; */
+  
+}
+/* 
+.k-time-accept{
+  background-color: white !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none;
+  height: 20px;
+  border-left: 1px solid #ccc !important;
+  border-radius: 0px !important;
+}
+
+.k-time-accept span{
+  color: red !important;
+}
+
+.k-time-cancel{
+  background-color: white !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border: none !important;
+}
+
+.k-button-text{
+}
+
+.k-actions{
+  border-top: 1px solid #ccc;
+}
+
+.k-time-cancel:hover{
+  border: none !important;
+} */

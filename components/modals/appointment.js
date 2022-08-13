@@ -4,14 +4,15 @@ import Modal from '@components/modals/index'
 import { useLang } from '@hooks/useLang'
 import Button from '@components/button'
 import { getMaxDate, showErrorMessage } from '@utils/helpers'
-import TimePicker from 'rc-time-picker'
+// import TimePicker from 'rc-time-picker'
 import { useMembers } from '@hooks/shared/members'
 import appointmentService from '@services/appointmentService'
 import { toast } from 'react-toastify'
 import { useRequest } from '@services/api'
 import { BASE_URL_CLINIC } from '@common/constants'
 import moment from 'moment'
-
+import TimePickerPro from '@components/time-picker'
+import { TimePicker } from "@progress/kendo-react-dateinputs";
 function AppointmentModal(
   {
     token,
@@ -25,6 +26,10 @@ function AppointmentModal(
     formatType
   }
 ) {
+// alert(formatType)
+  const defaultValue = new Date();
+
+
   const members = useMembers({ token, clinic_id: clinicId })
 
   const {
@@ -40,7 +45,8 @@ function AppointmentModal(
   const [time, setTime] = useState()
 
   const handleValueChange = value => {
-    setTime(value)
+    setTime(value.target.value)
+    // alert(value.target.value)
   }
 
   useEffect(() => {
@@ -105,6 +111,7 @@ function AppointmentModal(
                   </div>
                 )}
               </Field>
+
               <Field
                 type="text"
                 name="appointment_time"
@@ -120,21 +127,20 @@ function AppointmentModal(
                     {/*  onChange={input.onChange}*/}
                     {/*  className="form-control input-height"*/}
                     {/*/>*/}
-                    <TimePicker
-                      showSecond={false}
-                      minuteStep={5}
-                      className="form-control input-height"
-                      value={time}
-                      allowEmpty
-                      onChange={(e) => {
-                        handleValueChange(e)
-                      }}
-                      use12Hours={is12Hour}
-                    />
+                    <TimePicker 
+                        style={{zIndex:999}} format={formatType} 
+                        defaultValue={defaultValue} 
+
+                        onChange={(e) => {
+                          handleValueChange(e)
+                        }}
+                      />
+
                     {meta.error && meta.touched && <span className="text-red-500 text-xs mt-1">{meta.error}</span>}
                   </div>
                 )}
               </Field>
+
               <Field
                 type="text"
                 name="duration_minutes"
